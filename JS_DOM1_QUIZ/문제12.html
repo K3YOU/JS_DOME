@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        /*
+            문제12_학생테이블.PNG 의 그림을 반복문과 배열을 사용하여 출력하시오.
+            start table and done
+            start tr and done
+
+            */
+
+            var info = [];
+                info[0] = ["학번", "이름", "성적", "등급"];
+                info[1] = [15, "고길동", 83, "B"];
+                info[2] = [16, "이순신", 96, "A"];
+                info[3] = [17, "김선달", 95, "A"];
+                info[4] = [19, "아무개", 75, "C"];
+                info[5] = [37, "박치민", 55, "D"];
+
+        document.write("<h3>result</h3>")
+        document.write("<table border=3>")
+
+            for (i=0;i<6;i++){
+                document.write("<tr>")
+
+                for (j=0;j<info[i].length;j++){
+                document.write("<td>",info[i][j],"</td>")
+                
+                }
+                document.write("</tr>")
+
+            }
+
+        document.write("</table>")
+
+
+
+
+    </script>
+</body>
+</html>
