@@ -10,15 +10,15 @@
 	var check1 = false;
 	var check2 = false;
 
-	if( userEmail.indexOf("@") > 0 ) { check1=true; }
+	if( userEmail.indexOf("@") > 0 ) { check1=true; } // 골멩이가 있으면 사실이다.
 
 	for(var i = 0; i < arrUrl.length; i++) {
-		if( userEmail.indexOf(arrUrl[i]) > 0 ) {
+		if( userEmail.indexOf(arrUrl[i]) > 0 ) {  // 유저이메일에 접근 경로가 있으면 사실이다.
 			check2 = true;
 		} 
 	}
 
-	if( check1 && check2 ) {
+	if( check1 && check2 ) {     // 두가지가 다 있으면 유효하다
 		document.write( userEmail );
 	} else {
 		alert("이메일 형식이 잘못되었습니다.");

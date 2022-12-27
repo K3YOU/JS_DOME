@@ -16,8 +16,35 @@
             버튼을 누르면 셀렉트로 선택한 내용이 출력되도록 하시오.
             단, 사과 , 배 , 바나나중 하나를 선택하지않으면, "하나를 선택해야합니다." 라는 메세지를 출력하시오.
         */
+       function checkSelection(message){
+        var elem = document.getElementById('fruits')
+        var arr =["0"  ,"pear"]
+        if (elem.value == 0) {
+            alert(message);
+            elem.focus();
+            return false;
+        } else {
+            v  = arr[elem.value];
+            alert(v)  //elem의 value == 1
+           // alert(elem.value)  //elem의 value == 1
+            return true;
+        }
+       }
       
     </script>
+    <form>
+        choose a fruits
+        <select id = "fruits">
+            <option value="0">choose</option>
+            <option value="1">pear</option>
+            <option value="2">apple</option>
+            <option value="3">banana</option>
+
+        </select>
+
+        <input type="button"
+        onclick="checkSelection('should be choosen')" value="check"/>
+    </form>
 
     <form>
      

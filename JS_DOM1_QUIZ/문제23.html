@@ -21,6 +21,31 @@
 
         s = "1/One,2/Two,3/Three,4/Four,5/Five";
 
+        n = s.split(',') // 1/one, -> 1/one
+        for (i=0;i<n.length;i++){
+                m = n[i].split("/") // 1/one -> 1 one -> m은 0과 1로 나누어짐
+                for (j = 0; j <m.length; j ++){   // m.length = 0,1
+                    document.write(m[j])
+
+                }
+                // document.write(m[0],m[1])   // 이중 for문 안 쓰려면
+
+
+            }
+
+        // 푸는 법 두 가지     
+
+        n = s.split(',') // 1/one, -> 1/one
+        for (i=0;i<n.length;i++){
+                m = n[i].split("/") // 1/one -> 1 one -> m은 0과 1로 나누어짐
+              
+                document.write(m[0],m[1])   // 이중 for문 안 쓰려면
+
+
+            }
+  
+  
+
     </script>
 </body>
 </html>

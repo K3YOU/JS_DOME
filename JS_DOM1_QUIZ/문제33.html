@@ -11,13 +11,20 @@
         /*
             버튼을 누르면 이만수의 배경이 빨간색으로 변경하시오. 
         */
-
+        function ChangeColor(){
+            alert()
+            document.getElementById("name").style.backgroundcolor = c;
+        }
 
     </script>
 
     <h4>학생  명단</h4>
-		이름: <span id="name">이만수</span>       
+		이름: <span id="name" onclick="ChangeColor('red')">이만수</span>       
         <br> <br>
         나이: <span id="age">12</span>
+    
+    <form>
+        <button onclick = "changeColor()">click here</button>
+    </form>
 </body>
 </html>

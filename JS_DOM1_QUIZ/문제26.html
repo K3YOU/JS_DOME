@@ -18,7 +18,30 @@
           
            
         */
+        var address = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+       
         var userEmail = prompt("당신의 이메일 주소는?", "");
+
+        var check1 = false
+        var check2 = false
+
+        if(userEmail.indexOf("@")>0){
+            check1 = true
+        }
+        for (i= 0;i<address.length;i++){
+            if(address.indexOf(address[i])>0){
+                check2 = true
+            }
+        }    
+
+        if(check1 == true && check2== true){
+            document.write("correct email")
+        }
+        else {
+            document.write("uncorrect")
+        }
+
+
 
     </script>
 </body>

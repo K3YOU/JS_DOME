@@ -11,6 +11,11 @@
         /*
             버튼을 누르면 이만수를 김철수로 변경하고 , 나이를 20으로 바꾸시오. 
         */ 
+       function changeNameAge(){
+            document.getElementById("name").innerHTML = "김철수";
+            //span->document //id로 바꾸기 :getElementById("아이디명")//html안에 넣기 : innerHTML = 바꿀 내용
+            document.getElementById("age").innerHTML = 10
+       }
        
     </script>
 
@@ -19,5 +24,7 @@
         <br> <br>
         나이: <span id="age">12</span>
         <input type="button" value="눌러보세요" onclick="changeNameAge()">  
+
+
 </body>
 </html>

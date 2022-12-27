@@ -11,7 +11,16 @@
         /*
             이름을 입력받고 버튼을 누른다. 단, 입력된내용이 없으면 "필드가 비어있습니다" 를 출력한다.
         */
-      
+      function checkNotEmpty(){
+        var u = document.getElementById("user").value;
+        if (u.length == 0){
+            alert("필드가 비어있다")
+        }
+        else {
+            alert("필드가  안 비어있다")
+
+        }
+      }
     </script>
 
     <form>

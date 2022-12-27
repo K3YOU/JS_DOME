@@ -14,21 +14,57 @@
             {"num" : 1003 , "id" : "qwer3333" , "pw" : "asdf3333" , "name" : "이상아" , "math" : 15, "eng" : 10, "kor" : 50},
             {"num" : 1004 , "id" : "qwer4444" , "pw" : "asdf4444" , "name" : "조민수" , "math" : 16, "eng" : 40, "kor" : 20},
         ]
-
-        /*
+     
             
-            [문제1]
-                국어점수가 수학점수 보다 높은 학생들 번호 이름 출력 
+            // [문제1]
+            //     국어점수가 수학점수 보다 높은 학생들 번호 이름 출력 
+            
+            for(i = 0;i <jsonArr.length;i++){    
+                if(jsonArr[i]['math']<jsonArr[i]['kor']){
+                    console.log(jsonArr[i])
+                    
+                }
+                
+           }
 
-            [문제2]
-                국어 수학 영어 세과목의 평균이 30점이상이면  합격이다 합격생 번호 이름 출력 
+           console.log("=========================================")
 
-            [문제3]
-                총합 등수순서대로 번호 이름 출력 
+            // [문제2]
+            //     국어 수학 영어 세과목의 평균이 30점이상이면  합격이다 합격생 번호 이름 출력 
+            
+            sum = 0
+            for(i = 0;i <jsonArr.length;i++){
+                sum = jsonArr[i]['math']+jsonArr[i]['kor']+jsonArr[i]["eng"]
+                if(sum/3>=30){
+                    console.log(jsonArr[i]['num'], jsonArr[i]['name'],"<br>")
+                    
+                }
+                
+           }
 
+            console.log("=========================================")
 
-        */
+            // [문제3]
+            //     총합 등수순서대로 번호 이름 출력 
 
+          
+            for(i = 0;i <jsonArr.length;i++){
+                sum = jsonArr[i]['math']+jsonArr[i]['kor']+jsonArr[i]["eng"]
+                max = 0
+                for (j = 0; j <jsonArr.length;j++){
+                    sum2 = jsonArr[j]['math']+jsonArr[j]['kor']+jsonArr[j]["eng"]
+                        if(sum > sum2){
+                            temp =jsonArr[i];
+                            jsonArr[i] = jsonArr[j];
+                            jsonArr[j] = temp
+                        }
+                }
+                
+           }
+
+           for(i = 0; i < jsonArr.length; i++){
+            console.log(jsonArr[i])
+           }
 
     </script>
 </body>
