@@ -7,13 +7,29 @@
             inload 속성을 사용해서 함수를 호출하면 
             문서가 시작되자마자 함수가 실행된다. 
         */
-
-        function onLoadDoc() {
-            alert("문서가 로드되었습니다.");
-            document.body.style.backgroundColor = "red";
-        }
+                function onLoadDoc(){
+                    alert("문서가 로드됨")
+                    document.write.style.backgrondColor = "red"
+                }
+        
     </script>
 </head>
-<body onload="onLoadDoc()"> 
+<!-- <body onload="onLoadDoc()">  -->
+<body>    
+    <form>
+        <input type="button" value="click here" onclick="onLoadDoc()" />
+    </form>
 </body>
 </html>
+
+
+
+
+
+
+<!-- 
+
+function onLoadDoc() {
+    alert("문서가 로드되었습니다.");
+    document.body.style.backgroundColor = "red";
+} -->
